@@ -8,8 +8,21 @@
   align-items: center;
 }
 
+:where(.stack) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap, 1em);
+  align-items: flex-start;
+}
+
+:where(.full-bleed) {
+  width: 100vw;
+  margin-inline-start: calc(50% - 50vw);
+}
+
 :where(.step--1) {
   font-size: var(--step--1);
+  /* font-family: var(--font-special); */
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: var(--letter-spacing-1);

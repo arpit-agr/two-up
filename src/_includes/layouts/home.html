@@ -6,3 +6,18 @@
   {{ content | safe }}
   {%- include "partials/slider.html" -%}
 {%- endblock -%}
+{%- block bodyScripts -%}
+  <script>
+    function fullWidth() {
+      const twoUp = document.querySelector('.slider');
+      while (twoUp.firstChild)
+        {
+          twoUp.parentNode.insertBefore(twoUp.firstChild,
+        twoUp);
+        }
+        twoUp.parentNode.removeChild(twoUp);
+        document.querySelector('button').style.display = 'none';
+        document.querySelector('img').style.borderRadius = 'var(--space-3xs)';
+    }
+  </script>
+{%- endblock -%}

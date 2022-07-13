@@ -1,0 +1,102 @@
+.slider-container {
+  --flow-space: 2em;
+}
+
+.slider-container > * {
+  --flow-space: 1em;
+}
+
+.orientation {
+  --cluster-gap: 0.5em;
+}
+
+@media (orientation: landscape) {
+  .orientation {
+    display: none;
+  }
+}
+
+.slider {
+  /* Color of the track & thumb */
+  --accent-colour: black;
+  /* Or you can set the two independently: */
+  --track-color: white;
+  --thumb-color: black;
+  /* Background of the thumb */
+  --thumb-background: #fff;
+  /* Size of the thumb */
+  --thumb-size: 62px;
+  /* Thickness of the bar */
+  --bar-size: 2px;
+  /* Touch-thickness of the bar */
+  --bar-touch-size: 30px;
+}
+
+.has-js .slider > * + * {
+  --flow-space: 0;
+}
+
+.slider .styles_scrubber__39cN6 {
+  width: var(--space-2xl);
+  height: var(--space-2xl);
+}
+/* 
+.slider svg {
+  fill: black;
+} */
+
+.slider-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hubble,
+.webb {
+  position: relative;
+}
+
+.hubble:after,
+.webb::after {
+  content: attr(data-title);
+  position: absolute;
+  color: white;
+  font-size: var(--step-1);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: var(--font-special);
+}
+
+.hubble:after {
+  inset-block-end: var(--space-xs-s);
+  inset-inline-start: var(--space-xs-s);
+}
+
+.webb::after {
+  inset-block-end: var(--space-xs-s);
+  inset-inline-end: var(--space-xs-s);
+}
+
+.slider-footer {
+  --flow-space: 1ex;
+  justify-content: space-between;
+}
+
+.slider-container button {
+  padding: 0;
+  background-color: transparent;
+  color: var(--accent);
+  border: none;
+  text-decoration-line: underline;
+  text-underline-offset: var(--space-4xs);
+  cursor: pointer;
+
+  /* padding: var(--space-4xs) var(--space-3xs);
+  border: 1px solid var(--accent);
+  border-radius: 100vmin; */
+}
+
+.slider-container button:hover {
+  text-decoration-thickness: var(--space-4xs);
+}

@@ -7,12 +7,8 @@
     sans-serif;
   --letter-spacing-0: -0.015em;
   --letter-spacing-1: 0.04em;
-}
-
-@media (prefers-color-scheme: dark) {
-  a {
-    color: hsl(240deg 100% 81%);
-  }
+  --primary: white;
+  --accent: hsl(209deg 100% 53%);
 }
 
 body {
@@ -25,6 +21,18 @@ body {
     min-height: 100svh;
   }
 }
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration-thickness: var(--space-4xs);
+}
+/* 
+button {
+  font-family: var(--font-special);
+} */
 
 :focus {
   outline: 2px solid;
@@ -75,14 +83,8 @@ h1 {
   h1:after {
     content: "";
     height: 2px;
-    background: black;
+    background: var(--primary);
   }
-}
-
-h1:after {
-  content: "";
-  height: 2px;
-  background: black;
 }
 
 p {
@@ -91,95 +93,4 @@ p {
 
 a {
   text-underline-offset: var(--space-4xs);
-}
-
-.slider-container {
-  --flow-space: 2em;
-}
-
-.slider-container > * {
-  --flow-space: 1em;
-}
-
-.orientation {
-  --cluster-gap: 0.5em;
-  /* padding-block-start: var(--space-2xs);
-  border-block-start: 1px solid; */
-}
-
-@media (orientation: landscape) {
-  .orientation {
-    display: none;
-  }
-}
-
-.slider {
-  /* Color of the track & thumb */
-  --accent-colour: black;
-  /* Or you can set the two independently: */
-  --track-color: black;
-  --thumb-color: black;
-  /* Background of the thumb */
-  --thumb-background: #fff;
-  /* Size of the thumb */
-  --thumb-size: 62px;
-  /* Thickness of the bar */
-  --bar-size: 2px;
-  /* Touch-thickness of the bar */
-  --bar-touch-size: 30px;
-}
-
-.has-js .slider > * + * {
-  --flow-space: 0;
-}
-
-.slider .styles_scrubber__39cN6 {
-  width: var(--space-2xl);
-  height: var(--space-2xl);
-}
-
-.slider img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: var(--step--2);
-}
-
-.hubble,
-.webb {
-  position: relative;
-}
-
-.hubble:after,
-.webb::after {
-  content: attr(data-title);
-  position: absolute;
-  color: white;
-  font-size: var(--step-1);
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1;
-  font-family: var(--font-special);
-}
-
-.hubble:after {
-  inset-block-end: var(--space-xs);
-  inset-inline-start: var(--space-xs);
-}
-
-.webb::after {
-  inset-block-end: var(--space-xs);
-  inset-inline-end: var(--space-xs);
-}
-
-.credit {
-  --flow-space: var(--space-s);
-  max-width: unset;
-  font-family: var(--font-special);
-  text-align: right;
-}
-
-footer {
-  margin-top: auto;
-  text-align: right;
 }
