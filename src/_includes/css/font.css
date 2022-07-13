@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "fallback";
+  size-adjust: 106%;
+  src: local("Arial Narrow");
+}
+
+/* roboto-condensed-regular - latin */
+@font-face {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""),
+    url("fonts/roboto-condensed-v25-latin-regular.woff2") format("woff2"),
+    url("fonts/roboto-condensed-v25-latin-regular.woff") format("woff");
+}
+/* roboto-condensed-700 - latin */
+@font-face {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(""),
+    url("fonts/roboto-condensed-v25-latin-700.woff2") format("woff2"),
+    url("fonts/roboto-condensed-v25-latin-700.woff") format("woff");
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,14,1.25,1440,14,1.414,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  --step--2: clamp(0.44rem, calc(0.6rem + -0.17vw), 0.56rem);
+  --step--1: clamp(0.62rem, calc(0.72rem + -0.12vw), 0.7rem);
+  --step-0: clamp(0.88rem, calc(0.88rem + 0vw), 0.88rem);
+  --step-1: clamp(1.09rem, calc(1.05rem + 0.21vw), 1.24rem);
+  --step-2: clamp(1.37rem, calc(1.26rem + 0.55vw), 1.75rem);
+  --step-3: clamp(1.71rem, calc(1.49rem + 1.09vw), 2.47rem);
+  --step-4: clamp(2.14rem, calc(1.75rem + 1.95vw), 3.5rem);
+  --step-5: clamp(2.67rem, calc(2.02rem + 3.25vw), 4.95rem);
+  --step-6: clamp(3.34rem, calc(2.29rem + 5.22vw), 6.99rem);
+  --step-7: clamp(4.17rem, calc(2.54rem + 8.17vw), 9.89rem);
+}

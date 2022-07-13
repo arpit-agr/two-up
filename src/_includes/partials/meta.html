@@ -12,9 +12,9 @@
 {%- set siteTitle = site.name -%}
 {%- set description = site.description -%}
 
-<!-- {%- if not opengraphUrl -%}
-  {% set opengraphUrl = site.url + '/img/og/' + page.fileSlug + '.jpeg' %}
-{%- endif -%} -->
+{%- if not opengraphUrl -%}
+  {% set opengraphUrl = site.url + '/images/opengraph.png' %}
+{%- endif -%}
 
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ canonicalLink }}" />
@@ -24,11 +24,11 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ currentUrl }}" />
 
-<!-- <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta property="og:image" content="{{ opengraphUrl }}" />
 <meta name="twitter:image" content="{{ opengraphUrl }}" />
 <meta property="og:image:alt" content="Page image for {{ pageTitle }}" />
-<meta name="twitter:image:alt" content="Page image for {{ pageTitle }}" /> -->
+<meta name="twitter:image:alt" content="Page image for {{ pageTitle }}" />
 
 <meta name="description" content="{{ description }}" />
 <meta name="twitter:description" content="{{ description }}" />

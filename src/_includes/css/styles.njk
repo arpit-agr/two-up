@@ -1,6 +1,10 @@
 <!-- capture the CSS content as a Nunjucks variable -->
 {% set css %}
   {% include "./reset.css" %}
+  {% include "./font.css" %}
+  {% include "./space.css" %}
+  {% include "./global.css" %}
+  {% include "./utilities.css" %}
 {% endset %}
 
 <style>{{ css | cssmin | safe }}</style>

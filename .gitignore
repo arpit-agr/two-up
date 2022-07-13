@@ -12,6 +12,7 @@ package-lock.json
 
 # vscode
 .vscode
+.prettierignore
 
 # macOS related files
 .DS_Store

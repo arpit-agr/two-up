@@ -1,6 +1,8 @@
 const directoryOutputPlugin = require("@11ty/eleventy-plugin-directory-output");
 const htmlmin = require("html-minifier");
 const CleanCSS = require("clean-css");
+const esbuild = require("esbuild");
+const imageShortcode = require("./src/_11ty/shortcodes/image");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.setQuietMode(true);
@@ -23,8 +25,8 @@ module.exports = function(eleventyConfig) {
   });
 
   //Passthrough copy
-  // eleventyConfig.addPassthroughCopy("./src/fonts");
-	// eleventyConfig.addPassthroughCopy("./src/images");
+	eleventyConfig.addPassthroughCopy("./src/images");
+  eleventyConfig.addPassthroughCopy("./src/fonts");
 	// eleventyConfig.addPassthroughCopy("./src/scripts");
   // eleventyConfig.addPassthroughCopy("./src/favicon.ico");
 	// eleventyConfig.addPassthroughCopy("./src/icon.svg");
@@ -40,6 +42,22 @@ module.exports = function(eleventyConfig) {
   //Filter
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
+  });
+
+  //SHORTCODE
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+
+  //ELEVENTY AFTER EVENT
+	eleventyConfig.on('eleventy.after', async () => {
+    // Run me after the build ends
+		return esbuild.build({
+      entryPoints: [
+				'src/build-scripts/two-up.js'
+			],
+      bundle: true,
+			minify: true,
+      outdir: 'public/scripts'
+    });
   });
 
   return {

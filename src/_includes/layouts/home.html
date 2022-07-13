@@ -1,5 +1,8 @@
 {%- extends "layouts/base.html" -%}
-
+{%- block injectHead -%}
+  <script src="scripts/two-up.js"></script>
+{%- endblock -%}
 {%- block content -%}
   {{ content | safe }}
+  {%- include "partials/slider.html" -%}
 {%- endblock -%}
