@@ -1,0 +1,6 @@
+<!-- capture the CSS content as a Nunjucks variable -->
+{% set css %}
+  {% include "./reset.css" %}
+{% endset %}
+
+<style>{{ css | cssmin | safe }}</style>
