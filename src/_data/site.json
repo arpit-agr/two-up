@@ -1,7 +1,7 @@
 {
   "name": "Example",
   "description": "Interactive slider comparing Hubble Space Telescope's image of the Carina Nebula to the one from the James Webb Space Telescope.",
-  "url": "https://example.com",
+  "url": "https://hubble-vs-webb.netlify.app/",
   "themeColor": "#000",
   "colorScheme": "light dark",
   "developerName": "Arpit Agrawal",
