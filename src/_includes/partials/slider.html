@@ -22,8 +22,13 @@
     <button class="step--1">View individually</button>
   </div>
   <hr>
-  <details class="flow">
-    <summary class="step--1">Note</summary>
-    <p class="step--1">{{ imageNote }}</p>
+  <details class="flow step--1">
+    <summary>Note</summary>
+    <p>{{ hubble.imageNote }}</p>
+    <p>Credit: 
+      <a href="{{ hubble.imageLink }}">
+        {{ hubble.imageCredit }}
+      </a>
+    </p>
   </details>
 </div>
