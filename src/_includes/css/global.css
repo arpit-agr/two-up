@@ -9,7 +9,7 @@
   --letter-spacing-1: 0.04em;
   --primary: white;
   --secondary: hsl(0deg 0% 90%);
-  --tertiary: hsl(0deg 0% 100% / 10%);
+  --tertiary: hsl(0deg 0% 16%);
   --accent: hsl(209deg 100% 53%);
 }
 

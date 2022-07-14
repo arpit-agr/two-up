@@ -32,9 +32,9 @@
   --bar-touch-size: 30px;
 }
 
-:where(.has-js) .slider {
-  outline: 1px dashed var(--tertiary);
-}
+/* :where(.has-js) .slider {
+  outline: 1px solid var(--tertiary);
+} */
 
 :where(.has-js) .slider > * + * {
   --flow-space: 0;
@@ -54,6 +54,33 @@
   height: auto;
   max-height: calc(100vh - (2 * var(--space-s-m)));
   object-fit: cover;
+
+  /* background-color: transparent; */
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--tertiary) 25%,
+      var(--tertiary) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--tertiary) 75%,
+      var(--tertiary) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--tertiary) 25%,
+      var(--tertiary) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--tertiary) 75%,
+      var(--tertiary) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: var(--step-0) var(--step-0);
 }
 
 .hubble,
@@ -61,9 +88,9 @@
   position: relative;
 }
 
-.hubble {
+/* .hubble {
   outline: 1px dashed var(--tertiary);
-}
+} */
 
 :where(.has-js) .hubble:before,
 :where(.has-js) .webb::before {
@@ -121,11 +148,9 @@
   content: "";
 }
 
-.slider-container[data-state="visible"] .hubble img {
-  /* border-radius: var(--space-3xs); */
-  /* outline: 1px dashed hsl(0deg 0% 100% / 10%); */
+/* .slider-container[data-state="visible"] .hubble img {
   outline: 1px dashed var(--tertiary);
-}
+} */
 
 .slider-container[data-state="visible"] button {
   display: none;
