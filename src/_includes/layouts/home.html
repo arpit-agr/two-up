@@ -8,16 +8,20 @@
 {%- endblock -%}
 {%- block bodyScripts -%}
   <script>
-    function fullWidth() {
-      const twoUp = document.querySelector('.slider');
+    const sliderContainer = document.querySelector('.slider-container');
+    const twoUp = document.querySelector('.slider');
+    const viewIndividually = document.querySelector('button');
+
+    viewIndividually.addEventListener("click", showIndividually);
+
+    function showIndividually() {
       while (twoUp.firstChild)
         {
           twoUp.parentNode.insertBefore(twoUp.firstChild,
         twoUp);
         }
         twoUp.parentNode.removeChild(twoUp);
-        document.querySelector('button').style.display = 'none';
-        document.querySelector('img').style.borderRadius = 'var(--space-3xs)';
+        sliderContainer.setAttribute('data-state', 'visible');
     }
   </script>
 {%- endblock -%}

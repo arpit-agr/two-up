@@ -8,12 +8,15 @@
   --letter-spacing-0: -0.015em;
   --letter-spacing-1: 0.04em;
   --primary: white;
+  --secondary: hsl(0deg 0% 90%);
+  --tertiary: hsl(0deg 0% 100% / 10%);
   --accent: hsl(209deg 100% 53%);
 }
 
 body {
   font-family: var(--font-plain);
   padding: var(--space-s-m);
+  color: var(--secondary);
 }
 
 @supports (height: 100svh) {
@@ -29,10 +32,20 @@ a {
 a:hover {
   text-decoration-thickness: var(--space-4xs);
 }
-/* 
+
 button {
-  font-family: var(--font-special);
-} */
+  padding: 0;
+  background-color: transparent;
+  color: var(--accent);
+  border: none;
+  text-decoration-line: underline;
+  text-underline-offset: var(--space-4xs);
+  cursor: pointer;
+
+  /* padding: var(--space-2xs) var(--space-xs);
+  border: 1px solid var(--accent);
+  border-radius: 100vmin; */
+}
 
 :focus {
   outline: 2px solid;
@@ -66,6 +79,7 @@ button {
 }
 
 h1 {
+  color: var(--primary);
   font-size: var(--step-4);
   font-family: var(--font-special);
   letter-spacing: var(--letter-spacing-0);
@@ -88,9 +102,16 @@ h1 {
 }
 
 p {
-  max-width: 53ch;
+  max-width: 60ch;
 }
 
 a {
   text-underline-offset: var(--space-4xs);
+}
+
+hr {
+  height: 0px;
+  color: var(--tertiary);
+  border-style: dashed;
+  border-width: 1px 0 0 0;
 }

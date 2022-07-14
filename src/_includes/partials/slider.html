@@ -5,10 +5,10 @@
   </p>
   <two-up class="slider full-bleed flow">
     <div class="hubble" data-title="Hubble">
-      {% image "./src/images/hubble.png", "NGC 3324 in the Carina Nebula captured on NASA’s Hubble Space Telescope", "(min-width: 30em) 98vw, 100vw", "eager" %}
+      {% image "./src/images/hubble-4k.png", "NGC 3324 in the Carina Nebula captured on NASA’s Hubble Space Telescope", "(min-width: 30em) 98vw, 100vw", "eager" %}
     </div>
     <div class="webb" data-title="Webb">
-      {% image "./src/images/webb.png", "NGC 3324 in the Carina Nebula captured in infrared light by the Near-Infrared Camera (NIRCam) on NASA’s James Webb Space Telescope", "(min-width: 30em) 98vw, 100vw", "eager" %}
+      {% image "./src/images/webb-4k.jpg", "NGC 3324 in the Carina Nebula captured in infrared light by the Near-Infrared Camera (NIRCam) on NASA’s James Webb Space Telescope", "(min-width: 30em) 98vw, 100vw", "eager" %}
     </div>
   </two-up>
   <div class="slider-footer cluster">
@@ -19,6 +19,11 @@
       <a href="https://webbtelescope.org/contents/media/images/2022/031/01G77PKB8NKR7S8Z6HBXMYATGJ">Webb</a>
       ]
     </p>
-    <button class="step--1" onclick="fullWidth()">View individually</button>
+    <button class="step--1">View individually</button>
   </div>
+  <hr>
+  <details class="flow">
+    <summary class="step--1">Note</summary>
+    <p class="step--1">{{ imageNote }}</p>
+  </details>
 </div>

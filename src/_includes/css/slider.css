@@ -30,6 +30,8 @@
   --bar-size: 2px;
   /* Touch-thickness of the bar */
   --bar-touch-size: 30px;
+
+  outline: 1px dashed var(--tertiary);
 }
 
 .has-js .slider > * + * {
@@ -48,6 +50,7 @@
 .slider-container img {
   width: 100%;
   height: auto;
+  max-height: calc(100vh - (2 * var(--space-s-m)));
   object-fit: cover;
 }
 
@@ -56,10 +59,27 @@
   position: relative;
 }
 
+.hubble:before,
+.webb::before {
+  content: "👀";
+  position: absolute;
+  inset-block-start: var(--space-xs-s);
+  font-size: var(--step-1);
+}
+
+.hubble:before {
+  inset-inline-end: var(--space-xs-s);
+}
+
+.webb::before {
+  inset-inline-start: var(--space-xs-s);
+}
+
 .hubble:after,
 .webb::after {
   content: attr(data-title);
   position: absolute;
+  inset-block-start: var(--space-xs-s);
   color: white;
   font-size: var(--step-1);
   font-weight: 700;
@@ -69,34 +89,36 @@
 }
 
 .hubble:after {
-  inset-block-end: var(--space-xs-s);
   inset-inline-start: var(--space-xs-s);
 }
 
 .webb::after {
-  inset-block-end: var(--space-xs-s);
   inset-inline-end: var(--space-xs-s);
 }
 
 .slider-footer {
-  --flow-space: 1ex;
   justify-content: space-between;
-}
-
-.slider-container button {
-  padding: 0;
-  background-color: transparent;
-  color: var(--accent);
-  border: none;
-  text-decoration-line: underline;
-  text-underline-offset: var(--space-4xs);
-  cursor: pointer;
-
-  /* padding: var(--space-4xs) var(--space-3xs);
-  border: 1px solid var(--accent);
-  border-radius: 100vmin; */
 }
 
 .slider-container button:hover {
   text-decoration-thickness: var(--space-4xs);
+}
+
+.slider-container details p {
+  max-width: 52ch;
+}
+
+.slider-container[data-state="visible"] .hubble:before,
+.slider-container[data-state="visible"] .webb:before {
+  content: "";
+}
+
+.slider-container[data-state="visible"] .hubble img {
+  /* border-radius: var(--space-3xs); */
+  /* outline: 1px dashed hsl(0deg 0% 100% / 10%); */
+  outline: 1px dashed var(--tertiary);
+}
+
+.slider-container[data-state="visible"] button {
+  display: none;
 }
