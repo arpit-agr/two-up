@@ -30,11 +30,13 @@
   --bar-size: 2px;
   /* Touch-thickness of the bar */
   --bar-touch-size: 30px;
+}
 
+:where(.has-js) .slider {
   outline: 1px dashed var(--tertiary);
 }
 
-.has-js .slider > * + * {
+:where(.has-js) .slider > * + * {
   --flow-space: 0;
 }
 
@@ -59,8 +61,12 @@
   position: relative;
 }
 
-.hubble:before,
-.webb::before {
+.hubble {
+  outline: 1px dashed var(--tertiary);
+}
+
+:where(.has-js) .hubble:before,
+:where(.has-js) .webb::before {
   content: "👀";
   position: absolute;
   inset-block-start: var(--space-xs-s);
@@ -72,6 +78,8 @@
 }
 
 .webb::before {
+  /* flip horizontally */
+  transform: scaleX(-1);
   inset-inline-start: var(--space-xs-s);
 }
 
@@ -104,7 +112,7 @@
   text-decoration-thickness: var(--space-4xs);
 }
 
-.slider-container details p {
+:where(.slider-container) details p {
   max-width: 52ch;
 }
 
