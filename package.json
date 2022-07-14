@@ -4,8 +4,8 @@
   "description": "A starter repository to build a website with the Eleventy static site generator.",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "build": "eleventy",
+    "start": "eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "clean-css": "^5.3.0",
     "esbuild": "^0.14.49",
-    "html-minifier": "^4.0.0"
+    "html-minifier": "^4.0.0",
+    "netlify-plugin-cache": "^1.0.3"
   }
 }
