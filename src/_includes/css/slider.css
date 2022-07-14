@@ -113,7 +113,7 @@
 }
 
 :where(.slider-container) details p {
-  max-width: 52ch;
+  max-width: 54ch;
 }
 
 .slider-container[data-state="visible"] .hubble:before,

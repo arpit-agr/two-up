@@ -2,7 +2,7 @@
 title: Hubble vs. Webb
 layout: "layouts/home.html"
 hubble:
-  imageNote: "The image from the HST has been transformed slightly to align it with the one from the JWST"
+  imageNote: "The image from the HST has been transformed slightly to align it with the one from the&nbsp;JWST"
   imageCredit: "John Christensen"
   imageLink: "https://johnedchristensen.github.io/WebbCompare/Carina.html"
 ---

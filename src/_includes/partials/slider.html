@@ -24,7 +24,7 @@
   <hr>
   <details class="flow step--1">
     <summary>Note</summary>
-    <p>{{ hubble.imageNote }}</p>
+    <p>{{ hubble.imageNote | safe }}</p>
     <p>Credit: 
       <a href="{{ hubble.imageLink }}">
         {{ hubble.imageCredit }}
