@@ -135,6 +135,14 @@
   justify-content: space-between;
 }
 
+:where(.slider-container) button {
+  display: none;
+}
+
+:where(.has-js .slider-container) button {
+  display: unset;
+}
+
 .slider-container button:hover {
   text-decoration-thickness: var(--space-4xs);
 }
