@@ -2,7 +2,7 @@
   "name": "Example",
   "description": "An interactive demo to compare Carina Nebula's image captured by the Hubble Space Telescope and the James Webb Space Telescope.",
   "url": "https://hubble-vs-webb.netlify.app",
-  "themeColor": "#000",
+  "themeColor": "#121212",
   "colorScheme": "dark",
   "developerName": "Arpit Agrawal",
   "developerLink": "arpit.agrawal2502@gmail.com"

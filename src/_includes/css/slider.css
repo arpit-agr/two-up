@@ -18,10 +18,10 @@
 
 .slider {
   /* Color of the track & thumb */
-  --accent-colour: black;
+  --accent-colour: var(--bg);
   /* Or you can set the two independently: */
   --track-color: white;
-  --thumb-color: black;
+  --thumb-color: var(--bg);
   /* Background of the thumb */
   --thumb-background: #fff;
   /* Size of the thumb */
@@ -46,7 +46,7 @@
 }
 /* 
 .slider svg {
-  fill: black;
+  fill: var(--bg);
 } */
 
 .slider-container img {

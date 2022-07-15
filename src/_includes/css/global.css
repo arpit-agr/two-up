@@ -7,6 +7,7 @@
     sans-serif;
   --letter-spacing-0: -0.015em;
   --letter-spacing-1: 0.04em;
+  --bg: hsl(0deg 0% 7%);
   --primary: white;
   --secondary: hsl(0deg 0% 90%);
   --tertiary: hsl(0deg 0% 16%);
@@ -17,6 +18,7 @@ body {
   font-family: var(--font-plain);
   padding: var(--space-s-m);
   color: var(--secondary);
+  background-color: var(--bg);
 }
 
 @supports (height: 100svh) {
