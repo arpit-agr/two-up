@@ -20,10 +20,10 @@
   /* Color of the track & thumb */
   --accent-colour: var(--bg);
   /* Or you can set the two independently: */
-  --track-color: white;
+  --track-color: hsl(0deg 0% 100% / 70%);
   --thumb-color: var(--bg);
   /* Background of the thumb */
-  --thumb-background: #fff;
+  --thumb-background: hsl(0deg 0% 100% / 70%);
   /* Size of the thumb */
   --thumb-size: 62px;
   /* Thickness of the bar */
@@ -43,7 +43,17 @@
 .slider .styles_scrubber__39cN6 {
   width: var(--space-2xl);
   height: var(--space-2xl);
+
+  border-color: transparent;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
+
+.slider .styles_two-up-handle__2kVsP:before {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
 /* 
 .slider svg {
   fill: var(--bg);
