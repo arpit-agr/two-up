@@ -141,16 +141,46 @@
   inset-inline-end: var(--space-xs-s);
 }
 
-.slider-footer {
+.credits {
+  --flow-space: 0.5em;
+  gap: 0em calc(var(--space-3xl) + var(--space-xl));
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
 }
 
+:where(.slider-container) summary {
+  /* width: max-content; */
+  padding: var(--space-3xs) var(--space-4xs);
+  cursor: pointer;
+}
+
+:where(.slider-container) summary ~ * {
+  padding-inline-start: 1em;
+  border-inline-start: 2px solid var(--tertiary);
+}
+
+:where(.slider-container) details[open] summary {
+  background-color: var(--tertiary);
+}
+
+:where(.slider-container) details[open]:first-child :last-child {
+  margin-block-end: 1em;
+}
+
+.credits p {
+  max-width: 61ch;
+}
+
+:where(.slider-container) .credits + hr,
 :where(.slider-container) button {
   display: none;
 }
 
-:where(.has-js .slider-container) button {
-  display: unset;
+:where(.has-js) .credits + hr,
+:where(.has-js) .slider-container button {
+  --flow-space: var(--space-s-m);
+  display: block;
 }
 
 .slider-container button:hover {
@@ -170,6 +200,7 @@
   outline: 1px dashed var(--tertiary);
 } */
 
+.slider-container[data-state="visible"] .credits + hr,
 .slider-container[data-state="visible"] button {
   display: none;
 }

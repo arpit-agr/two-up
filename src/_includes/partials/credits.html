@@ -1,0 +1,40 @@
+{%- set nasa -%}
+  <a href="{{ nasaUrl }}">NASA</a>
+{%- endset -%}
+{%- set esa -%}
+  <a href="{{ esaUrl }}">ESA</a>
+{%- endset -%}
+{%- set heritage -%}
+  <a href="{{ heritageUrl }}">The Hubble Heritage Team</a>
+{%- endset -%}
+{%- set stsci -%}
+  <a href="{{ stsciUrl }}">STScI</a>
+{%- endset -%}
+{%- set aura -%}
+  <a href="{{ auraUrl }}">AURA</a>
+{%- endset -%}
+{%- set csa -%}
+  <a href="{{ csaUrl }}">CSA</a>
+{%- endset -%}
+
+<div class="credits cluster">
+  <details class="flow step--1">
+    <summary>Hubble image credit</summary>
+    <p>
+        {{ nasa | safe }}, {{ esa | safe }}, and {{ heritage | safe }} ({{ stsci | safe }}/{{ aura | safe }}); Acknowledgment: N. Smith (University of California, Berkeley)
+    </p>
+    <hr>
+    <p>{{ hubble.imageNote | safe }} (via
+      <a href="{{ hubble.imageLink }}">
+        {{ hubble.imageCredit }}
+      </a>
+      )
+    </p>
+  </details>
+  <details class="flow step--1">
+    <summary>Webb image credit</summary>
+    <p>
+      {{ nasa | safe }}, {{ esa | safe }}, {{ csa | safe }}, and {{ stsci | safe }}
+    </p>
+  </details>
+</div>

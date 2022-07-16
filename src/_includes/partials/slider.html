@@ -11,24 +11,7 @@
       {% image "./src/images/webb-4k.jpg", "NGC 3324 in the Carina Nebula captured in infrared light by the Near-Infrared Camera (NIRCam) on NASA’s James Webb Space Telescope", "(min-width: 30em) 98vw, 100vw", "eager" %}
     </div>
   </two-up>
-  <div class="slider-footer cluster">
-    <p class="credit step--1">
-      Credit: NASA 
-      [
-      <a href="https://esahubble.org/images/opo0834a/">Hubble</a> | 
-      <a href="https://webbtelescope.org/contents/media/images/2022/031/01G77PKB8NKR7S8Z6HBXMYATGJ">Webb</a>
-      ]
-    </p>
-    <button class="step--1">View individually</button>
-  </div>
-  <hr>
-  <details class="flow step--1">
-    <summary>Note</summary>
-    <p>{{ hubble.imageNote | safe }}</p>
-    <p>Credit: 
-      <a href="{{ hubble.imageLink }}">
-        {{ hubble.imageCredit }}
-      </a>
-    </p>
-  </details>
+    {%- include "partials/credits.html" -%}
+    <hr>
+  <button class="step--1">View individually</button>
 </div>

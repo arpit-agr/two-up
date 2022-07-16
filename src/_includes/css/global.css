@@ -36,17 +36,16 @@ a:hover {
 }
 
 button {
-  padding: 0;
-  background-color: transparent;
-  color: var(--accent);
-  border: none;
-  text-decoration-line: underline;
-  text-underline-offset: var(--space-4xs);
+  padding: var(--space-3xs) var(--space-2xs);
+  border: 1px solid transparent;
+  background-color: var(--tertiary);
+  color: var(--secondary);
   cursor: pointer;
+}
 
-  /* padding: var(--space-2xs) var(--space-xs);
-  border: 1px solid var(--accent);
-  border-radius: 100vmin; */
+button:hover {
+  border-color: var(--secondary);
+  background-color: transparent;
 }
 
 :focus {
@@ -116,4 +115,5 @@ hr {
   color: var(--tertiary);
   border-style: dashed;
   border-width: 1px 0 0 0;
+  margin: 0;
 }
