@@ -104,7 +104,8 @@
 
 :where(.has-js) .hubble:before,
 :where(.has-js) .webb::before {
-  content: "👀";
+  content: "👀"/"";
+  alt: "";
   position: absolute;
   inset-block-start: var(--space-xs-s);
   font-size: var(--step-1);
