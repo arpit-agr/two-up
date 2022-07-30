@@ -4,8 +4,8 @@
   "description": "A starter repository to build a website with the Eleventy static site generator.",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve"
+    "build": "NODE_ENV=production eleventy",
+    "start": "NODE_ENV=development eleventy --serve"
   },
   "repository": {
     "type": "git",
