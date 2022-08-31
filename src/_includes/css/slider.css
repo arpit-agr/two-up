@@ -1,35 +1,35 @@
 .slider-container {
-  --flow-space: 2em;
+	--flow-space: 2em;
 }
 
 .slider-container > * {
-  --flow-space: 1em;
+	--flow-space: 1em;
 }
 
 .orientation {
-  --cluster-gap: 0.5em;
+	--cluster-gap: 0.5em;
 }
 
 @media (orientation: landscape) {
-  .orientation {
-    display: none;
-  }
+	.orientation {
+		display: none;
+	}
 }
 
 .slider {
-  /* Color of the track & thumb */
-  --accent-colour: var(--bg);
-  /* Or you can set the two independently: */
-  --track-color: hsl(0deg 0% 100% / 70%);
-  --thumb-color: var(--bg);
-  /* Background of the thumb */
-  --thumb-background: hsl(0deg 0% 100% / 70%);
-  /* Size of the thumb */
-  --thumb-size: 62px;
-  /* Thickness of the bar */
-  --bar-size: 2px;
-  /* Touch-thickness of the bar */
-  --bar-touch-size: 30px;
+	/* Color of the track & thumb */
+	--accent-colour: var(--bg);
+	/* Or you can set the two independently: */
+	--track-color: hsl(0deg 0% 100% / 70%);
+	--thumb-color: var(--bg);
+	/* Background of the thumb */
+	--thumb-background: hsl(0deg 0% 100% / 70%);
+	/* Size of the thumb */
+	--thumb-size: 62px;
+	/* Thickness of the bar */
+	--bar-size: 2px;
+	/* Touch-thickness of the bar */
+	--bar-touch-size: 30px;
 }
 
 /* :where(.has-js) .slider {
@@ -37,21 +37,21 @@
 } */
 
 :where(.has-js) .slider > * + * {
-  --flow-space: 0;
+	--flow-space: 0;
 }
 
 .slider .styles_scrubber__39cN6 {
-  width: var(--space-2xl);
-  height: var(--space-2xl);
+	width: var(--space-2xl);
+	height: var(--space-2xl);
 
-  border-color: transparent;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
+	border-color: transparent;
+	backdrop-filter: blur(16px) saturate(180%);
+	-webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
 .slider .styles_two-up-handle__2kVsP:before {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
+	backdrop-filter: blur(16px) saturate(180%);
+	-webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
 /* 
@@ -60,42 +60,42 @@
 } */
 
 .slider-container img {
-  width: 100%;
-  height: auto;
-  max-height: calc(100vh - (2 * var(--space-s-m)));
-  object-fit: cover;
+	width: 100%;
+	height: auto;
+	max-height: calc(100vh - (2 * var(--space-s-m)));
+	object-fit: cover;
 
-  /* background-color: transparent; */
-  background-image: linear-gradient(
-      0deg,
-      transparent 24%,
-      var(--tertiary) 25%,
-      var(--tertiary) 26%,
-      transparent 27%,
-      transparent 74%,
-      var(--tertiary) 75%,
-      var(--tertiary) 76%,
-      transparent 77%,
-      transparent
-    ),
-    linear-gradient(
-      90deg,
-      transparent 24%,
-      var(--tertiary) 25%,
-      var(--tertiary) 26%,
-      transparent 27%,
-      transparent 74%,
-      var(--tertiary) 75%,
-      var(--tertiary) 76%,
-      transparent 77%,
-      transparent
-    );
-  background-size: var(--step-0) var(--step-0);
+	/* background-color: transparent; */
+	background-image: linear-gradient(
+			0deg,
+			transparent 24%,
+			var(--tertiary) 25%,
+			var(--tertiary) 26%,
+			transparent 27%,
+			transparent 74%,
+			var(--tertiary) 75%,
+			var(--tertiary) 76%,
+			transparent 77%,
+			transparent
+		),
+		linear-gradient(
+			90deg,
+			transparent 24%,
+			var(--tertiary) 25%,
+			var(--tertiary) 26%,
+			transparent 27%,
+			transparent 74%,
+			var(--tertiary) 75%,
+			var(--tertiary) 76%,
+			transparent 77%,
+			transparent
+		);
+	background-size: var(--step-0) var(--step-0);
 }
 
 .hubble,
 .webb {
-  position: relative;
+	position: relative;
 }
 
 /* .hubble {
@@ -104,97 +104,97 @@
 
 :where(.has-js) .hubble:before,
 :where(.has-js) .webb::before {
-  content: "👀"/"";
-  alt: "";
-  position: absolute;
-  inset-block-start: var(--space-xs-s);
-  font-size: var(--step-1);
+	content: "👀"/"";
+	alt: "";
+	position: absolute;
+	inset-block-start: var(--space-xs-s);
+	font-size: var(--step-1);
 }
 
 .hubble:before {
-  inset-inline-end: var(--space-xs-s);
+	inset-inline-end: var(--space-xs-s);
 }
 
 .webb::before {
-  /* flip horizontally */
-  transform: scaleX(-1);
-  inset-inline-start: var(--space-xs-s);
+	/* flip horizontally */
+	transform: scaleX(-1);
+	inset-inline-start: var(--space-xs-s);
 }
 
 .hubble:after,
 .webb::after {
-  content: attr(data-title);
-  position: absolute;
-  inset-block-start: var(--space-xs-s);
-  color: white;
-  font-size: var(--step-1);
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1;
-  font-family: var(--font-special);
+	content: attr(data-title);
+	position: absolute;
+	inset-block-start: var(--space-xs-s);
+	color: white;
+	font-size: var(--step-1);
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1;
+	font-family: var(--font-special);
 }
 
 .hubble:after {
-  inset-inline-start: var(--space-xs-s);
+	inset-inline-start: var(--space-xs-s);
 }
 
 .webb::after {
-  inset-inline-end: var(--space-xs-s);
+	inset-inline-end: var(--space-xs-s);
 }
 
 .credits {
-  --flow-space: 0.5em;
-  gap: 0em calc(var(--space-3xl) + var(--space-xl));
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
+	--flow-space: 0.5em;
+	gap: 0em calc(var(--space-3xl) + var(--space-xl));
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: baseline;
 }
 
 :where(.slider-container) summary {
-  /* width: max-content; */
-  padding: var(--space-3xs) var(--space-4xs);
-  cursor: pointer;
+	/* width: max-content; */
+	padding: var(--space-3xs) var(--space-4xs);
+	cursor: pointer;
 }
 
 :where(.slider-container) summary ~ * {
-  padding-inline-start: 1em;
-  border-inline-start: 2px solid var(--tertiary);
+	padding-inline-start: 1em;
+	border-inline-start: 2px solid var(--tertiary);
 }
 
 :where(.slider-container) details[open] summary {
-  background-color: var(--tertiary);
+	background-color: var(--tertiary);
 }
 
 :where(.slider-container) details[open]:first-child :last-child {
-  margin-block-end: 1em;
+	margin-block-end: 1em;
 }
 
 .credits p {
-  max-width: 61ch;
+	max-width: 61ch;
 }
 
 :where(.slider-container) .credits + hr,
 :where(.slider-container) button {
-  display: none;
+	display: none;
 }
 
 :where(.has-js) .credits + hr,
 :where(.has-js) .slider-container button {
-  --flow-space: var(--space-s-m);
-  display: block;
+	--flow-space: var(--space-s-m);
+	display: block;
 }
 
 .slider-container button:hover {
-  text-decoration-thickness: var(--space-4xs);
+	text-decoration-thickness: var(--space-4xs);
 }
 
 :where(.slider-container) details p {
-  max-width: 54ch;
+	max-width: 54ch;
 }
 
 .slider-container[data-state="visible"] .hubble:before,
 .slider-container[data-state="visible"] .webb:before {
-  content: "";
+	content: "";
 }
 
 /* .slider-container[data-state="visible"] .hubble img {
@@ -203,5 +203,9 @@
 
 .slider-container[data-state="visible"] .credits + hr,
 .slider-container[data-state="visible"] button {
-  display: none;
+	display: none;
+}
+
+.styles_scrubber__39cN6 svg {
+	max-inline-size: 100%;
 }
